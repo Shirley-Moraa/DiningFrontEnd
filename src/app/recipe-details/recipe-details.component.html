@@ -1,0 +1,24 @@
+<h2>Recipe Details</h2> 
+
+<hr/>
+<div *ngIf="recipe">
+  <div>
+    <label><b>Title: </b></label> {{recipe.title}}
+  </div>
+  <div>
+    <label><b>Cost: </b></label> {{recipe.cost}}
+  </div>
+  <div>
+    <label><b>Contains Gluten: </b></label> {{recipe.containsGluten}}
+  </div>
+  <div>
+    <label><b>Contains Peanuts: </b></label> {{recipe.containsPeanut}}
+  </div>
+  <div>
+    <label><b>Ingredients </b></label> {{recipe.ingredients}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Recipe List</button><br>

@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Menu List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Budget</th>
+            <th>Combinations</th>
+            <th>HasGluten</th>
+            <th>HasPeanut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let menu of menus | async">
+            <td>{{menu.budget}}</td>
+            <td>{{menu.combinations}}</td>
+            <td>{{menu.containsGluten}}</td>
+            <td>{{menu.containsPeanut}}</td>
+            <td><button (click)="deleteMenu(menu.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateMenu(menu.id)" class="btn btn-info" style="margin-left: 10px">Generate Recipes</button>
+                <button (click)="menuDetails(menu.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  

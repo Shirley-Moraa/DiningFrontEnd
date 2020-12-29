@@ -1,0 +1,38 @@
+<h3>Create Menu</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Budget</label>
+      <input type="number" class="form-control" id="budget" required [(ngModel)]="menu.budget" name="budget">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Combinations</label>
+      <input type="number" class="form-control" id="combinations" required [(ngModel)]="menu.combinations" name="combinations">
+    </div>
+
+    <div class="form-group">
+      <div class = "form-control">
+      <label class="checkbox-inline">Contains Peanut</label>
+      <input type="checkbox"  id="containsPeanut" required [(ngModel)]="menu.containsPeanut" name="containsPeanut">
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class = "form-control">
+        <label class="checkbox-inline">Contains Gluten</label>
+        <input type="checkbox"  id="containsGluten" required [(ngModel)]="menu.containsGluten" name="containsGluten">
+        </div>
+      </div>
+       
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+
+</div>
+
+

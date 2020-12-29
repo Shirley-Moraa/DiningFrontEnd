@@ -1,0 +1,36 @@
+<h3>Create Senior</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="senior.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="senior.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="senior.emailId" name="emailId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">FoodConstraints</label>
+      <input type="text" class="form-control" id="foodConstraint" required [(ngModel)]="senior.foodConstraint" name="foodConstraint">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Age</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="senior.age" name="age">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newSenior()">Add</button> -->
+</div>

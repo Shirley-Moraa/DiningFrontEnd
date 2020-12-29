@@ -1,0 +1,22 @@
+<h2>Menu Details</h2> 
+
+<hr/>
+<div *ngIf="menu">
+  <div>
+    <label><b>Budget: </b></label> {{menu.budget}}
+  </div>
+  <div>
+    <label><b>Combinations: </b></label> {{menu.combinations}}
+  </div>
+  <div>
+    <label><b>Contains Gluten: </b></label> {{menu.containsGluten}}
+  </div>
+  <div>
+    <label><b>Contains Peanuts: </b></label> {{menu.containsPeanut}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Menus List</button><br>
+

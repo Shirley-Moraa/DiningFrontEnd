@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Seniors List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>FoodConstraints</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let senior of seniors | async">
+          <td>{{senior.firstName}}</td>
+          <td>{{senior.lastName}}</td>
+          <td>{{senior.emailId}}</td>
+          <td>{{senior.foodConstraint}}</td>
+          <td>{{senior.age}}</td>
+          <td><button (click)="deleteSenior(senior.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateSenior(senior.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="seniorDetails(senior.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
